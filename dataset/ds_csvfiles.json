@@ -1,0 +1,84 @@
+{
+	"name": "ds_csvfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filepath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": {
+					"value": "@dataset().filepath",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DOCUMENT_DATE",
+				"type": "String"
+			},
+			{
+				"name": "DOCUMENT_NUMBER",
+				"type": "String"
+			},
+			{
+				"name": "PERIOD",
+				"type": "String"
+			},
+			{
+				"name": "RECEIVER_GSTIN",
+				"type": "String"
+			},
+			{
+				"name": "SUPPLIER_GSTIN",
+				"type": "String"
+			},
+			{
+				"name": "SUPPLIER NAME",
+				"type": "String"
+			},
+			{
+				"name": "TAXABLE_VALUE",
+				"type": "String"
+			},
+			{
+				"name": "IGST",
+				"type": "String"
+			},
+			{
+				"name": "CGST",
+				"type": "String"
+			},
+			{
+				"name": "SGST/UTGST",
+				"type": "String"
+			},
+			{
+				"name": "CESS",
+				"type": "String"
+			},
+			{
+				"name": "TOTAL_TAX",
+				"type": "String"
+			},
+			{
+				"name": "TOTAL_VALUE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

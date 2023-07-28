@@ -1,0 +1,14 @@
+{
+	"name": "ADF-KK-1",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d9b16166-c75c-4303-b6a4-d3a3f116bd29",
+		"tenantId": "d5562c99-efdb-4b98-a396-735138b7509c"
+	}
+}
